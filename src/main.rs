@@ -1,5 +1,8 @@
+mod morse_code;
+
 use eframe::{NativeOptions, run_native, App, Frame};
 use egui::{CentralPanel, Context, TopBottomPanel, TextEdit, Ui, ScrollArea};
+use morse_code::to_morse;
 
 struct TextProcessorApp {
     input_text: String,
@@ -22,7 +25,7 @@ impl App for TextProcessorApp {
         // Horní lišta s ovládacími prvky
         TopBottomPanel::top("top_panel").show(ctx, |ui| {
             ui.horizontal(|ui| {
-                ui.heading("Coder Generator");
+                ui.heading("Text Processor");
                 ui.separator();
                 self.draw_controls(ui);
             });
@@ -32,22 +35,22 @@ impl App for TextProcessorApp {
         CentralPanel::default().show(ctx, |ui| {
             ui.vertical_centered(|ui| {
                 ui.add_space(10.0);
-                ui.heading("Input text:");
+                ui.heading("Zadej text:");
                 ui.add_space(5.0);
                 
                 // Vstupní textové pole
                 ui.add(TextEdit::multiline(&mut self.input_text)
                     .desired_width(ui.available_width() * 0.95)
-                    .desired_rows(8
-                    .hint_text("Input text..."));
+                    .desired_rows(8)
+                    .hint_text("Sem zadej text..."));
 
                 // Tlačítko pro zpracování textu
-                if ui.button("Process").clicked() {
+                if ui.button("Zpracovat").clicked() {
                     self.process_text();
                 }
                 
                 ui.add_space(10.0);
-                ui.heading("Result:");
+                ui.heading("Výsledek:");
                 ui.add_space(5.0);
                 
                 // Výstupní textové pole (pouze pro čtení)
@@ -59,7 +62,7 @@ impl App for TextProcessorApp {
                 });
                 
                 // Tlačítko pro kopírování výsledku
-                if ui.button("Copy to clicpboard").clicked() {
+                if ui.button("Kopírovat do schránky").clicked() {
                     ui.output_mut(|o| o.copied_text = self.output_text.clone());
                 }
             });
@@ -74,7 +77,8 @@ impl TextProcessorApp {
             ui.radio_value(&mut self.selected_option, 0, "Žádná změna");
             ui.radio_value(&mut self.selected_option, 1, "Velká písmena");
             ui.radio_value(&mut self.selected_option, 2, "Malá písmena");
-            ui.radio_value(&mut self.selected_option, 3, "Počet znaků");
+            ui.radio_value(&mut self.selected_option, 3, "Morse Code");
+            ui.radio_value(&mut self.selected_option, 4, "Počet znaků");
         });
     }
 
@@ -83,7 +87,8 @@ impl TextProcessorApp {
             0 => self.output_text = self.input_text.clone(),
             1 => self.output_text = self.input_text.to_uppercase(),
             2 => self.output_text = self.input_text.to_lowercase(),
-            3 => self.output_text = format!("Počet znaků: {}", self.input_text.chars().count()),
+            3 => self.output_text = to_morse(&self.input_text),
+            4 => self.output_text = format!("Počet znaků: {}", self.input_text.chars().count()),
             _ => self.output_text = self.input_text.clone(),
         }
     }
@@ -96,7 +101,7 @@ fn main() {
     };
     
     run_native(
-        "Coder Generator",
+        "Text Processor",
         options,
         Box::new(|_cc| Box::new(TextProcessorApp::default())),
     )
