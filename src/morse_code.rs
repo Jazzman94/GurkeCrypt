@@ -1,4 +1,5 @@
 use std::collections::HashMap;
+use deunicode::deunicode;
 
 pub fn to_morse(input: &str) -> String {
     let morse = [
@@ -9,10 +10,12 @@ pub fn to_morse(input: &str) -> String {
         ('u', "..-"),   ('v', "...-"),  ('w', ".--"),   ('x', "-..-"),  ('y', "-.--"),
         ('z', "--.."),  ('0', "-----"), ('1', ".----"), ('2', "..---"), ('3', "...--"),
         ('4', "....-"), ('5', "....."), ('6', "-...."), ('7', "--..."), ('8', "---.."),
-        ('9', "----."),
+        ('9', "----."), ('.',"."), ('!',"!"), ('?',"?"), (',',","), (';',";"),
     ].iter().cloned().collect::<HashMap<_, _>>();
 
-    input
+    let cleaned = deunicode(input); // č → c, ř → r, ů → u, etc
+    
+    cleaned
         .to_lowercase()
         .split_whitespace()
         .map(|word| {

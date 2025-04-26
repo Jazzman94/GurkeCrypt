@@ -583,6 +583,7 @@ dependencies = [
 name = "coding_games_helper"
 version = "0.1.0"
 dependencies = [
+ "deunicode",
  "eframe",
  "egui",
  "winapi",
@@ -697,6 +698,12 @@ dependencies = [
  "quote",
  "syn 1.0.109",
 ]
+
+[[package]]
+name = "deunicode"
+version = "1.6.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "dc55fe0d1f6c107595572ec8b107c0999bb1a2e0b75e37429a4fb0d6474a0e7d"
 
 [[package]]
 name = "digest"

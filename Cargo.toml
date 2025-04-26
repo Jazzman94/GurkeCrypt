@@ -6,6 +6,7 @@ edition = "2021"
 [dependencies]
 eframe = "0.22.0"
 egui = "0.22.0"
+deunicode = "1.4"
 
 [dependencies.winapi]
 version = "0.3.9"
