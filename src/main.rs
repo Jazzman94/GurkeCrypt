@@ -58,7 +58,20 @@ impl App for TextProcessorApp {
             ui.horizontal(|ui| {
                 ui.label("Created by: Jiří Jaskowiec");
                 ui.with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {
-                    ui.label("All feedback is welcome. Please send it to jirijaskowiec@seznam.cz");
+                    let email = "jirijaskowiec@seznam.cz";
+                    
+                    // Make the email look like a hyperlink
+                    let response = ui.hyperlink_to(email, format!("mailto:{}", email));
+                    
+                    // Add a context menu for copying the email
+                    response.context_menu(|ui| {
+                        if ui.button("Copy Email").clicked() {
+                            ui.output_mut(|o| o.copied_text = email.to_string());
+                            ui.close_menu();
+                        }
+                    });
+                    
+                    ui.label("All feedback is welcomed. Please send it to:");
                 });
             });
         });
@@ -69,7 +82,8 @@ impl App for TextProcessorApp {
             .default_width(150.0)
             .width_range(120.0..=200.0)
             .show(ctx, |ui| {
-                ui.heading("Codes:");
+                ui.add_space(5.0);
+                ui.strong("Codes:");
                 ui.add_space(5.0);
                 self.draw_controls(ui);
             });
