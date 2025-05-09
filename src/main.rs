@@ -155,8 +155,7 @@ impl TextProcessorApp {
             
             // Runes
             (1, 0) => self.output_text = runes_code::to_runes(&self.input_text),    // Encode
-            (1, 1) => self.output_text = self.input_text.clone(),                   // Decode (placeholder)
-            
+            (1, 1) => self.output_text = runes_code::from_runes(&self.input_text),   // Decpde     
             // Phone Code
             (2, 0) => self.output_text = phone_numbers_code::to_phone_number(&self.input_text), // Encode
             (2, 1) => self.output_text = phone_numbers_code::from_phone_number(&self.input_text), // Decode
