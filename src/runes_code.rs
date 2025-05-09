@@ -1,7 +1,6 @@
 use std::collections::HashMap;
 use deunicode::deunicode;
 
-
 pub fn to_runes(input: &str) -> String {
     let rune_map = [
         ('a', "ᚨ"), ('b', "ᛒ"), ('c', "ᚲ"), ('d', "ᛞ"), ('e', "ᛖ"),
@@ -48,7 +47,7 @@ pub fn from_runes(input: &str) -> String {
         while let Some(&next_c) = chars.peek() {
             if !next_c.is_whitespace() && !rune_map.contains_key(rune.as_str()) {
                 rune.push(next_c);
-                chars.next(); // Posuneme se na další znak
+                chars.next();
             } else {
                 break;
             }
@@ -62,4 +61,24 @@ pub fn from_runes(input: &str) -> String {
     }
 
     result
+}
+
+// Testing
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_from_runes() {
+        let original = "hello world";
+        let runic = to_runes(original);
+        let converted = from_runes(&runic);
+        assert_eq!(converted, original);
+    }
+
+    #[test]
+    fn test_direct_conversion() {
+        assert_eq!(from_runes("ᚺᛖᛚᛚᛟ ᚥᛟᚱᛚᛞ"), "hello world");
+        assert_eq!(from_runes("ᚺᛖᛚᛚᛟ!"), "hello!");
+    }
 }
