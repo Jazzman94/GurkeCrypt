@@ -1,3 +1,5 @@
+#![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
+
 use eframe::{egui, NativeOptions, run_native, App, Frame};
 use egui::{Context, FontDefinitions};
 mod morse_code;
@@ -37,7 +39,7 @@ impl App for TextProcessorApp {
         // Top panel with heading and encode/decode radio buttons
         egui::TopBottomPanel::top("top_panel").show(ctx, |ui| {
             ui.horizontal(|ui| {
-                ui.heading("Text Processor");
+                ui.heading("Engurk it!");
                 
                 // Add some space between title and radio buttons
                 ui.add_space(20.0);
@@ -173,7 +175,7 @@ fn main() {
     };
     
     run_native(
-        "Text Processor",
+        "GurkeCrypt",
         options,
         Box::new(|_cc| Box::new(TextProcessorApp::default())),
     )

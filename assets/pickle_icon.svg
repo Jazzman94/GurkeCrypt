@@ -1,0 +1,65 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Pozadí -->
+  <circle cx="256" cy="256" r="240" fill="#f0f0f0" />
+  
+  <!-- Nakládací okurka - základní tvar -->
+  <ellipse cx="256" cy="270" rx="140" ry="180" fill="#2d8c21" />
+  <ellipse cx="256" cy="270" rx="130" ry="170" fill="#45a836" />
+  
+  <!-- Textura okurky - bublinky a výstupky -->
+  <g fill="#2d8c21">
+    <!-- Výstupky -->
+    <circle cx="210" cy="150" r="8" />
+    <circle cx="280" cy="170" r="7" />
+    <circle cx="180" cy="200" r="9" />
+    <circle cx="320" cy="210" r="8" />
+    <circle cx="190" cy="250" r="10" />
+    <circle cx="310" cy="260" r="9" />
+    <circle cx="230" cy="300" r="8" />
+    <circle cx="290" cy="310" r="7" />
+    <circle cx="200" cy="350" r="9" />
+    <circle cx="320" cy="360" r="8" />
+    <circle cx="260" cy="390" r="10" />
+    <circle cx="220" cy="200" r="7" />
+    <circle cx="270" cy="240" r="8" />
+    <circle cx="300" cy="280" r="6" />
+    <circle cx="240" cy="340" r="7" />
+    <circle cx="280" cy="370" r="9" />
+  </g>
+  
+  <!-- Odrazy na okurce - světlejší zelené části -->
+  <ellipse cx="220" cy="230" rx="30" ry="120" fill="#66c357" opacity="0.5" />
+  <ellipse cx="290" cy="230" rx="20" ry="100" fill="#66c357" opacity="0.3" />
+  
+  <!-- Nálevový efekt - bublinky -->
+  <g fill="#ffffff" opacity="0.2">
+    <circle cx="230" cy="180" r="3" />
+    <circle cx="310" cy="190" r="2" />
+    <circle cx="200" cy="230" r="4" />
+    <circle cx="280" cy="250" r="3" />
+    <circle cx="220" cy="280" r="2" />
+    <circle cx="330" cy="300" r="3" />
+    <circle cx="250" cy="330" r="4" />
+    <circle cx="290" cy="350" r="2" />
+    <circle cx="180" cy="310" r="3" />
+    <circle cx="210" cy="360" r="2" />
+  </g>
+  
+  <!-- Sluneční brýle -->
+  <g transform="translate(256, 220) scale(1.2) rotate(5)">
+    <!-- Rám brýlí -->
+    <path d="M-80,0 C-70,-15 -40,-15 -20,0 L20,0 C40,-15 70,-15 80,0 C70,15 40,15 20,0 L-20,0 C-40,15 -70,15 -80,0 Z" fill="#000000" />
+    
+    <!-- Skla brýlí -->
+    <ellipse cx="-50" cy="0" rx="30" ry="20" fill="#333333" />
+    <ellipse cx="50" cy="0" rx="30" ry="20" fill="#333333" />
+    
+    <!-- Odlesky na sklech -->
+    <ellipse cx="-60" cy="-5" rx="10" ry="5" fill="#ffffff" opacity="0.3" />
+    <ellipse cx="40" cy="-5" rx="10" ry="5" fill="#ffffff" opacity="0.3" />
+    
+    <!-- Nožičky brýlí -->
+    <path d="M-80,0 L-110,10" stroke="#000000" stroke-width="5" />
+    <path d="M80,0 L110,10" stroke="#000000" stroke-width="5" />
+  </g>
+</svg>

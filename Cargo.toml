@@ -1,5 +1,5 @@
 [package]
-name = "coding_games_helper"
+name = "GurkeCrypt"
 version = "0.1.0"
 edition = "2021"
 
@@ -11,3 +11,23 @@ deunicode = "1.4"
 [dependencies.winapi]
 version = "0.3.9"
 features = ["winuser", "windef"]
+
+[target.'cfg(windows)'.dependencies]
+winapi = { version = "0.3", features = ["winuser"] }
+
+[[bin]]
+name = "GurkeCrypt" 
+path = "src/main.rs"
+
+[target.'cfg(windows)'.build-dependencies]
+winres = "0.1"
+
+[profile.release]
+lto = true
+codegen-units = 1
+opt-level = 3
+
+[package.metadata.bundle]
+name = "GurkeCrypt"
+identifier = "cz.jirijaskowiec.GurkeCrypt"
+icon = ["assets/icon.png"]
