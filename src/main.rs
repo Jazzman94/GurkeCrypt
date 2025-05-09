@@ -2,6 +2,8 @@
 
 use eframe::{egui, NativeOptions, run_native, App, Frame};
 use egui::{Context, FontDefinitions};
+use image::io::Reader as ImageReader;
+use image::GenericImageView;
 mod morse_code;
 mod phone_numbers_code;
 mod runes_code;
@@ -169,15 +171,28 @@ impl TextProcessorApp {
 }
 
 fn main() {
-    let options = NativeOptions {
+    let mut options = NativeOptions {
         initial_window_size: Some(egui::vec2(800.0, 600.0)),
         ..Default::default()
     };
     
+    options.icon_data = load_icon("assets/icon.ico").ok();
+
     run_native(
-        "GurkeCrypt",
+        "GurkeCrypt v0.1",
         options,
         Box::new(|_cc| Box::new(TextProcessorApp::default())),
     )
     .unwrap();
+}
+
+fn load_icon(path: &str) -> Result<eframe::IconData, Box<dyn std::error::Error>> {
+    let image = ImageReader::open(path)?.decode()?;
+    let (width, height) = image.dimensions();
+    let rgba = image.to_rgba8().into_raw();
+    Ok(eframe::IconData {
+        rgba,
+        width,
+        height,
+    })
 }
