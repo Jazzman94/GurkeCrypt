@@ -11,6 +11,12 @@ This project was created as a lightweight and handy utility for preparing encryp
 
 As the author, I’ve spent most of my life involved in these camps — first as a child, later as a leader — and I wanted to build a tool that would make it easy to prepare and decode messages in a fun and flexible way.
 
+# 📦 Download
+
+You can download the latest Windows binary from the [Releases](https://github.com/Jazzman94/gurkecrypt/releases) page.
+
+➡️ [Download GurkeCrypt for Windows](https://github.com/Jazzman94/gurkecrypt/releases/download/v0.1.0/gurkecrypt.exe)
+
 # 🛠 Project TODOs:
 - [x] Remove Console in Release build
 - [x] Fix icon in programs header
