@@ -13,8 +13,8 @@ As the author, I’ve spent most of my life involved in these camps — first as
 
 # 🛠 Project TODOs:
 - [x] Remove Console in Release build
-- [ ] Fix icon in programs header
-- [ ] Release first version
+- [x] Fix icon in programs header
+- [x] Release first version
 - [ ] Add context menu to show settings, alphabets, ...
 - [ ] Add settings tab for future modyfing
 - [ ] Add settings to modify morse .- symbols to the optional one

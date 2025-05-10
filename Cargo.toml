@@ -4,8 +4,8 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-eframe = "0.22.0"
-egui = "0.22.0"
+eframe = "0.25.0"
+egui = "0.25.0"
 deunicode = "1.4"
 image = "0.24"
 
@@ -27,6 +27,7 @@ winres = "0.1"
 lto = true
 codegen-units = 1
 opt-level = 3
+strip = true
 
 [package.metadata.bundle]
 name = "GurkeCrypt"
