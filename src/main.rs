@@ -100,7 +100,7 @@ impl App for TextProcessorApp {
                 ui.add_space(5.0);
                 let input_changed = ui.add(egui::TextEdit::multiline(&mut self.input_text)
                     .desired_width(ui.available_width())
-                    .desired_rows(8)
+                    .desired_rows(12)
                     .hint_text("Enter text here...")
                 );
                 
@@ -116,7 +116,7 @@ impl App for TextProcessorApp {
                 egui::ScrollArea::vertical().show(ui, |ui| {
                     ui.add(egui::TextEdit::multiline(&mut self.output_text.clone())
                         .desired_width(ui.available_width())
-                        .desired_rows(8)
+                        .desired_rows(12)
                         .interactive(false));
                 });
                 
@@ -171,12 +171,13 @@ impl TextProcessorApp {
 }
 
 fn main() {
-    let mut options = NativeOptions {
+    let icon_data = load_icon("assets/icon.ico").ok();
+    
+    let options: NativeOptions = NativeOptions {
         initial_window_size: Some(egui::vec2(800.0, 600.0)),
+        icon_data: icon_data,
         ..Default::default()
     };
-    
-    options.icon_data = load_icon("assets/icon.ico").ok();
 
     run_native(
         "GurkeCrypt v0.1",
