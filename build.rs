@@ -4,9 +4,10 @@ fn main() {
     
     let mut res = winres::WindowsResource::new();
     res.set_icon("assets/icon.ico");
-    res.set("InternalName", "TextProcessor");
-    res.set("FileDescription", "Text Processor Application");
-    res.set("ProductName", "Text Processor");
+    res.set("InternalName", "GurkeCrypt");
+    res.set("FileDescription", "Encdoing and decoding text");
+    res.set("OriginalFilename", "GurkeCrypt");
+    res.set("ProductName", "GurkeCrypt");
     
     match res.compile() {
         Err(e) => {

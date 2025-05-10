@@ -1,65 +1,558 @@
-<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 512 512"
+   version="1.1"
+   id="svg31"
+   sodipodi:docname="pickle_icon.svg"
+   inkscape:export-filename="pickle_icon_256.png"
+   inkscape:export-xdpi="48"
+   inkscape:export-ydpi="48"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs31" />
+  <sodipodi:namedview
+     id="namedview31"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="2.5121626"
+     inkscape:cx="219.33294"
+     inkscape:cy="310.68849"
+     inkscape:window-width="3840"
+     inkscape:window-height="2054"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg31" />
   <!-- Pozadí -->
-  <circle cx="256" cy="256" r="240" fill="#f0f0f0" />
-  
   <!-- Nakládací okurka - základní tvar -->
-  <ellipse cx="256" cy="270" rx="140" ry="180" fill="#2d8c21" />
-  <ellipse cx="256" cy="270" rx="130" ry="170" fill="#45a836" />
-  
   <!-- Textura okurky - bublinky a výstupky -->
-  <g fill="#2d8c21">
-    <!-- Výstupky -->
-    <circle cx="210" cy="150" r="8" />
-    <circle cx="280" cy="170" r="7" />
-    <circle cx="180" cy="200" r="9" />
-    <circle cx="320" cy="210" r="8" />
-    <circle cx="190" cy="250" r="10" />
-    <circle cx="310" cy="260" r="9" />
-    <circle cx="230" cy="300" r="8" />
-    <circle cx="290" cy="310" r="7" />
-    <circle cx="200" cy="350" r="9" />
-    <circle cx="320" cy="360" r="8" />
-    <circle cx="260" cy="390" r="10" />
-    <circle cx="220" cy="200" r="7" />
-    <circle cx="270" cy="240" r="8" />
-    <circle cx="300" cy="280" r="6" />
-    <circle cx="240" cy="340" r="7" />
-    <circle cx="280" cy="370" r="9" />
-  </g>
-  
   <!-- Odrazy na okurce - světlejší zelené části -->
-  <ellipse cx="220" cy="230" rx="30" ry="120" fill="#66c357" opacity="0.5" />
-  <ellipse cx="290" cy="230" rx="20" ry="100" fill="#66c357" opacity="0.3" />
-  
   <!-- Nálevový efekt - bublinky -->
-  <g fill="#ffffff" opacity="0.2">
-    <circle cx="230" cy="180" r="3" />
-    <circle cx="310" cy="190" r="2" />
-    <circle cx="200" cy="230" r="4" />
-    <circle cx="280" cy="250" r="3" />
-    <circle cx="220" cy="280" r="2" />
-    <circle cx="330" cy="300" r="3" />
-    <circle cx="250" cy="330" r="4" />
-    <circle cx="290" cy="350" r="2" />
-    <circle cx="180" cy="310" r="3" />
-    <circle cx="210" cy="360" r="2" />
-  </g>
-  
   <!-- Sluneční brýle -->
-  <g transform="translate(256, 220) scale(1.2) rotate(5)">
-    <!-- Rám brýlí -->
-    <path d="M-80,0 C-70,-15 -40,-15 -20,0 L20,0 C40,-15 70,-15 80,0 C70,15 40,15 20,0 L-20,0 C-40,15 -70,15 -80,0 Z" fill="#000000" />
-    
-    <!-- Skla brýlí -->
-    <ellipse cx="-50" cy="0" rx="30" ry="20" fill="#333333" />
-    <ellipse cx="50" cy="0" rx="30" ry="20" fill="#333333" />
-    
-    <!-- Odlesky na sklech -->
-    <ellipse cx="-60" cy="-5" rx="10" ry="5" fill="#ffffff" opacity="0.3" />
-    <ellipse cx="40" cy="-5" rx="10" ry="5" fill="#ffffff" opacity="0.3" />
-    
-    <!-- Nožičky brýlí -->
-    <path d="M-80,0 L-110,10" stroke="#000000" stroke-width="5" />
-    <path d="M80,0 L110,10" stroke="#000000" stroke-width="5" />
+  <g
+     id="g32"
+     transform="matrix(1.4807334,0,0,1.4807334,-129.61308,-126.29394)">
+    <circle
+       style="fill:#f9f9f9;fill-opacity:1;stroke:#ffffff;stroke-opacity:1"
+       id="path32"
+       cx="264.3035"
+       cy="264.30347"
+       r="155.65475" />
+    <path
+       id="ellipse1-8"
+       style="fill:#2d8c21"
+       d="m 341.04842,277.66057 c 0,99.41126 -61.04102,150.14525 -130.44649,150.14525 -69.40547,0 25.2201,-74.24014 23.206,-173.63099 -1.99032,-98.21706 -53.95033,-168.757835 15.00809,-160.892958 69.80354,7.961268 92.2324,84.967448 92.2324,184.378698 z"
+       sodipodi:nodetypes="sssss" />
+    <path
+       id="ellipse2-6"
+       style="fill:#3e9830;fill-opacity:1"
+       d="m 329.97149,269.33892 c 0,93.88841 -43.26127,143.32976 -109.69878,150.89296 -65.22013,7.42462 15.41152,-60.85193 22.45828,-154.47552 6.76708,-89.90778 -58.3677,-167.202088 3.81391,-165.22326 67.46891,2.14709 83.42659,74.91741 83.42659,168.80582 z"
+       sodipodi:nodetypes="sssss" />
+    <g
+       fill="#2d8c21"
+       id="g17"
+       transform="translate(410.00531,61.301765)">
+      <!-- Výstupky -->
+      <circle
+         cx="-72.721848"
+         cy="218.95105"
+         r="10"
+         id="circle6" />
+      <circle
+         cx="-72.838921"
+         cy="232.83177"
+         r="7"
+         id="circle16-6" />
+      <circle
+         cx="-76.192413"
+         cy="243.97746"
+         r="7"
+         id="circle16-68" />
+      <circle
+         cx="-185.45189"
+         cy="262.51126"
+         r="7"
+         id="circle16-0" />
+      <circle
+         cx="-185.36284"
+         cy="253.76306"
+         r="7"
+         id="circle16-4"
+         inkscape:transform-center-x="-4.6443101"
+         inkscape:transform-center-y="2.95547" />
+      <circle
+         cx="-160.17812"
+         cy="266.66684"
+         r="7"
+         id="circle16-7" />
+      <circle
+         cx="-219.89499"
+         cy="337.42883"
+         r="7"
+         id="circle16-42" />
+      <circle
+         cx="-179.73447"
+         cy="360.84387"
+         r="7"
+         id="circle16-3" />
+      <circle
+         cx="-174.14073"
+         cy="358.60748"
+         r="7"
+         id="circle16-03" />
+      <circle
+         cx="-158.91864"
+         cy="293.91095"
+         r="7"
+         id="circle16-07" />
+      <circle
+         cx="-138"
+         cy="200"
+         r="7"
+         id="circle16-2" />
+      <circle
+         cx="-152.62451"
+         cy="136.78615"
+         r="7"
+         id="circle3" />
+      <ellipse
+         style="fill:#2d8c21;fill-opacity:1;stroke-width:0.621622"
+         id="path32-1"
+         cx="-120.2272"
+         cy="335.59262"
+         rx="6.2989173"
+         ry="6.473887" />
+      <ellipse
+         style="fill:#2d8c21;fill-opacity:1;stroke-width:0.621622"
+         id="path32-7"
+         cx="-110.73792"
+         cy="333.34799"
+         rx="6.2989173"
+         ry="6.473887" />
+      <ellipse
+         style="fill:#2d8c21;fill-opacity:1;stroke-width:0.621622"
+         id="path32-77"
+         cx="-112.73792"
+         cy="324.34085"
+         rx="6.2989173"
+         ry="6.473887" />
+      <ellipse
+         style="fill:#2d8c21;fill-opacity:1;stroke-width:0.621622"
+         id="path32-65"
+         cx="-105.82698"
+         cy="327.13303"
+         rx="6.2989173"
+         ry="6.473887" />
+      <ellipse
+         style="fill:#2d8c21;fill-opacity:1;stroke-width:0.621622"
+         id="path32-8"
+         cx="-108.38993"
+         cy="315.40021"
+         rx="6.2989173"
+         ry="6.473887" />
+      <ellipse
+         style="fill:#2d8c21;fill-opacity:1;stroke-width:0.621622"
+         id="path32-4"
+         cx="-173.69174"
+         cy="186.46288"
+         rx="6.2989173"
+         ry="6.473887" />
+      <ellipse
+         style="fill:#2d8c21;fill-opacity:1;stroke-width:0.621622"
+         id="path32-70"
+         cx="-180.48613"
+         cy="102.68169"
+         rx="6.2989173"
+         ry="6.473887" />
+      <ellipse
+         style="fill:#2d8c21;fill-opacity:1;stroke-width:0.621622"
+         id="path32-82"
+         cx="-187.61201"
+         cy="104.47388"
+         rx="6.2989173"
+         ry="6.473887" />
+      <ellipse
+         style="fill:#2d8c21;fill-opacity:1;stroke-width:0.621622"
+         id="path32-2"
+         cx="-186.85666"
+         cy="95.185257"
+         rx="6.2989173"
+         ry="6.473887" />
+      <ellipse
+         style="fill:#2d8c21;fill-opacity:1;stroke-width:0.621622"
+         id="path32-94"
+         cx="-102.94572"
+         cy="247.44418"
+         rx="6.2989173"
+         ry="6.473887" />
+      <ellipse
+         style="fill:#2d8c21;fill-opacity:1;stroke-width:0.621622"
+         id="path32-44"
+         cx="-101.70109"
+         cy="252.47388"
+         rx="6.2989173"
+         ry="6.473887"
+         inkscape:transform-center-x="11.540407"
+         inkscape:transform-center-y="72.901594" />
+      <ellipse
+         style="fill:#2d8c21;fill-opacity:1;stroke-width:0.570003"
+         id="path32-9"
+         cx="-78.675995"
+         cy="121.40053"
+         rx="5.7758598"
+         ry="5.9363003" />
+      <ellipse
+         style="fill:#2d8c21;fill-opacity:1;stroke-width:0.570003"
+         id="path32-9-0"
+         cx="-115.43338"
+         cy="108.99438"
+         rx="5.7758598"
+         ry="5.9363003" />
+      <ellipse
+         style="fill:#2d8c21;fill-opacity:1;stroke-width:0.570003"
+         id="path32-9-9"
+         cx="-135.22414"
+         cy="72.936295"
+         rx="5.7758598"
+         ry="5.9363003" />
+      <ellipse
+         style="fill:#2d8c21;fill-opacity:1"
+         id="path32-5"
+         cx="-80.146141"
+         cy="133.27142"
+         rx="10.13304"
+         ry="10.414514" />
+      <ellipse
+         style="fill:#2d8c21;fill-opacity:1"
+         id="path32-99"
+         cx="-158.1983"
+         cy="36.280571"
+         rx="10.13304"
+         ry="10.414514" />
+      <ellipse
+         style="fill:#2d8c21;fill-opacity:1"
+         id="path32-6"
+         cx="-149.86696"
+         cy="43.414513"
+         rx="10.13304"
+         ry="10.414514" />
+    </g>
+    <path
+       id="ellipse17-4"
+       style="opacity:0.5;fill:#66c357;stroke-width:0.765985"
+       d="m 253.29898,273.84348 c -4.82912,58.0185 -22.19493,93.61316 -29.34284,106.09309 -6.83349,11.93097 21.62014,-44.97162 26.46108,-104.4608 4.78141,-58.75807 -11.27916,-118.06302 -5.06314,-106.47394 3.80109,7.08669 12.59414,48.98429 7.9449,104.84165 z"
+       sodipodi:nodetypes="sssss" />
+    <path
+       id="ellipse17-4-3"
+       style="opacity:0.5;fill:#66c357;stroke-width:0.796166"
+       d="m 277.03943,261.40119 c -7.9998,61.57911 -27.4731,98.62406 -35.37185,111.55849 -7.5513,12.36548 24.27921,-46.82031 32.36996,-109.96599 7.99127,-62.36964 -5.06485,-126.3844 0.59872,-113.71809 3.46328,7.74542 10.10498,52.84025 2.40317,112.12559 z"
+       sodipodi:nodetypes="sssss" />
+    <path
+       id="ellipse17-4-3-3"
+       style="opacity:0.5;fill:#66c357;stroke-width:0.877867"
+       d="m 299.94946,267.02579 c -10.64716,63.63837 -34.27087,101.7504 -43.81059,115.04453 -9.1201,12.70936 29.46678,-48.17287 40.2526,-113.43151 10.65319,-64.45664 -3.37962,-130.86244 3.01459,-117.68694 3.91007,8.05678 10.79394,54.80603 0.5434,116.07392 z"
+       sodipodi:nodetypes="sssss" />
+    <path
+       id="ellipse17-4-3-3-9"
+       style="opacity:0.5;fill:#66c357;stroke-width:0.608539"
+       d="m 309.85531,324.87789 c -14.90233,35.19897 -37.79871,53.88771 -46.83793,60.22649 -8.64163,6.05997 28.6221,-23.6767 43.79659,-59.79022 14.98794,-35.66971 10.17064,-75.88551 14.05079,-67.40581 2.37272,5.18532 3.33778,33.0817 -11.00945,66.96954 z"
+       sodipodi:nodetypes="sssss" />
+    <path
+       id="ellipse17-7"
+       style="opacity:0.5;fill:#66c357"
+       d="m 300.61425,126.50352 c 11.23149,10.29525 -27.29652,7.55027 -36.46854,14.31416 -15.00324,11.06412 -32.61011,31.18873 -38.06078,16.2372 -19.41872,-53.26668 6.95086,-55.38308 10.59441,-55.61323 16.12291,-1.01842 31.85524,-4.34371 63.93491,25.06187 z"
+       sodipodi:nodetypes="sssss" />
+    <path
+       id="ellipse17-7-2"
+       style="opacity:0.5;fill:#66c357"
+       d="m 215.08578,357.83433 c 6.65653,-13.70508 -7.11012,24.76717 -1.81265,34.85741 8.47795,16.14822 75.61289,0.39162 62.59293,7.85946 -51.94998,29.79689 -79.15789,19.50332 -79.79156,14.94253 -1.23716,-8.90438 -4.30051,-9.66292 19.01128,-57.6594 z"
+       sodipodi:nodetypes="sssss" />
+    <g
+       fill="#ffffff"
+       opacity="0.2"
+       id="g27">
+      <circle
+         cx="278.00531"
+         cy="307.30176"
+         r="2"
+         id="circle22-5" />
+      <circle
+         cx="294.00531"
+         cy="299.30176"
+         r="2"
+         id="circle22-7" />
+      <circle
+         cx="305.00531"
+         cy="304.30176"
+         r="2"
+         id="circle22-1" />
+      <circle
+         cx="253.00531"
+         cy="324.30176"
+         r="2"
+         id="circle22-6" />
+      <circle
+         cx="260.00531"
+         cy="195.30176"
+         r="2"
+         id="circle22-4" />
+      <circle
+         cx="323.00531"
+         cy="194.30176"
+         r="2"
+         id="circle22-10" />
+      <circle
+         cx="279.85477"
+         cy="341.54382"
+         r="4"
+         id="circle24" />
+      <circle
+         cx="274.466"
+         cy="284.27429"
+         r="3"
+         id="circle26-1" />
+      <circle
+         cx="264.10208"
+         cy="225.7619"
+         r="3"
+         id="circle26-4" />
+      <circle
+         cx="241.34671"
+         cy="230.74596"
+         r="3"
+         id="circle26-3" />
+      <circle
+         cx="215.88052"
+         cy="356.90649"
+         r="3"
+         id="circle26-9" />
+      <circle
+         cx="248.50943"
+         cy="400.51508"
+         r="3"
+         id="circle26-2" />
+      <circle
+         cx="249.13121"
+         cy="352.73276"
+         r="3"
+         id="circle26-5" />
+      <circle
+         cx="253.23511"
+         cy="290.36115"
+         r="3"
+         id="circle26-36" />
+      <circle
+         cx="306.00531"
+         cy="219.02028"
+         r="3"
+         id="circle26-57" />
+      <circle
+         cx="296.63477"
+         cy="261.61292"
+         r="3"
+         id="circle26-8" />
+      <circle
+         cx="273.14661"
+         cy="251.85756"
+         r="3"
+         id="circle26-95" />
+      <circle
+         cx="297.56827"
+         cy="147.85042"
+         r="3"
+         id="circle26-81" />
+      <circle
+         cx="303.07184"
+         cy="131.66515"
+         r="3"
+         id="circle26-7" />
+      <circle
+         cx="317.54572"
+         cy="141.59038"
+         r="3"
+         id="circle26-0" />
+      <circle
+         cx="254.19168"
+         cy="210.75916"
+         r="3"
+         id="circle26-73" />
+      <circle
+         cx="299.20435"
+         cy="337.60031"
+         r="2"
+         id="circle27-5" />
+      <circle
+         cx="277.01233"
+         cy="337.00806"
+         r="2"
+         id="circle27-8" />
+      <circle
+         cx="254.51956"
+         cy="349.62234"
+         r="2"
+         id="circle27-2" />
+      <circle
+         cx="277.16779"
+         cy="255.61699"
+         r="2"
+         id="circle27-7" />
+      <circle
+         cx="261.67987"
+         cy="268.93542"
+         r="2"
+         id="circle27-27" />
+      <circle
+         cx="212.65018"
+         cy="409.01202"
+         r="2"
+         id="circle27-0" />
+      <circle
+         cx="197.70239"
+         cy="414.53101"
+         r="2"
+         id="circle27-3" />
+      <circle
+         cx="196.16089"
+         cy="411.92407"
+         r="2"
+         id="circle27-70" />
+      <circle
+         cx="279.00531"
+         cy="120.30177"
+         r="2"
+         id="circle27-82" />
+      <circle
+         cx="270.19467"
+         cy="160.28723"
+         r="2"
+         id="circle27-08" />
+      <circle
+         cx="302.55884"
+         cy="199.67078"
+         r="2"
+         id="circle27-1" />
+      <circle
+         cx="305.24307"
+         cy="181.58308"
+         r="2"
+         id="circle27-18" />
+      <circle
+         cx="308.00531"
+         cy="183.30176"
+         r="2"
+         id="circle27-13" />
+      <circle
+         cx="319.00531"
+         cy="205.30176"
+         r="2"
+         id="circle27-81" />
+      <circle
+         cx="318.04599"
+         cy="257.4722"
+         r="2"
+         id="circle27-81-6" />
+      <circle
+         cx="321.74966"
+         cy="257.93509"
+         r="2"
+         id="circle27-81-8" />
+      <circle
+         cx="330.96078"
+         cy="273.23856"
+         r="2"
+         id="circle27-81-4" />
+      <circle
+         cx="330.50174"
+         cy="286.31662"
+         r="2"
+         id="circle27-81-3" />
+    </g>
+    <ellipse
+       style="fill:#2d8c21;fill-opacity:1;stroke-width:0.621622"
+       id="path32-84"
+       cx="327.43726"
+       cy="238.08679"
+       rx="6.2989173"
+       ry="6.473887" />
+    <ellipse
+       style="fill:#2d8c21;fill-opacity:1;stroke-width:0.621622"
+       id="path32-707"
+       cx="296.43835"
+       cy="178.31824"
+       rx="6.2989173"
+       ry="6.473887" />
+    <ellipse
+       style="fill:#2d8c21;fill-opacity:1;stroke-width:0.621622"
+       id="path32-66"
+       cx="301.59283"
+       cy="236.6261"
+       rx="6.2989173"
+       ry="6.473887" />
+    <ellipse
+       cx="258.21786"
+       cy="178.75343"
+       rx="35.720066"
+       ry="23.336979"
+       fill="#333333"
+       id="ellipse27"
+       transform="matrix(0.99634687,0.08539857,-0.08894852,0.99603622,0,0)"
+       style="stroke-width:1.1787" />
+    <ellipse
+       cx="331.78513"
+       cy="174.37289"
+       rx="34.155861"
+       ry="21.131329"
+       fill="#333333"
+       id="ellipse28"
+       transform="matrix(0.99672781,0.08083115,-0.09396704,0.99557531,0,0)"
+       style="stroke-width:1.09678" />
+    <ellipse
+       cx="257.93991"
+       cy="153.7597"
+       rx="12"
+       ry="6"
+       fill="#ffffff"
+       opacity="0.3"
+       id="ellipse29"
+       transform="rotate(8.3068065)"
+       style="stroke-width:1.2" />
+    <ellipse
+       cx="339.4061"
+       cy="122.51395"
+       rx="12"
+       ry="6"
+       fill="#ffffff"
+       opacity="0.3"
+       id="ellipse30"
+       transform="rotate(12.455494)"
+       style="stroke-width:1.2" />
+    <path
+       d="M 224.01376,205.13381 194.27553,175.63264"
+       stroke="#000000"
+       stroke-width="6.63708"
+       id="path30"
+       style="stroke:#333333;stroke-opacity:1" />
+    <path
+       d="m 363.70627,182.97517 -33.35502,25.00686"
+       stroke="#000000"
+       stroke-width="6.60354"
+       id="path31"
+       style="stroke:#333333;stroke-opacity:1" />
+    <path
+       d="m 261.55222,185.307 c 10.74341,-6.29292 21.42035,-6.02117 32.01951,1.93227"
+       stroke="#000000"
+       stroke-width="5.94608"
+       id="path31-9"
+       sodipodi:nodetypes="cc"
+       style="fill:none;stroke:#333333;stroke-opacity:1" />
   </g>
 </svg>
