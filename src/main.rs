@@ -7,6 +7,7 @@ use image::GenericImageView;
 mod morse_code;
 mod phone_numbers_code;
 mod runes_code;
+mod chaos_latin;
 
 const ICON_PNG: &[u8] = include_bytes!("../assets/pickle_icon_128.png");
 
@@ -68,9 +69,9 @@ impl App for TextProcessorApp {
         // Bottom panel with author info
         egui::TopBottomPanel::bottom("bottom_panel").show(ctx, |ui| {
             ui.horizontal(|ui| {
-                ui.label("Created by: Jiří Jaskowiec");
+                ui.label("Created by: Kwajgon Jazzmanowski");
                 ui.with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {
-                    let email = "jirijaskowiec@seznam.cz";
+                    let email = "shakalaka@bumbum.pl";
                     
                     // Make the email look like a hyperlink
                     let response = ui.hyperlink_to(email, format!("mailto:{}", email));
@@ -83,7 +84,7 @@ impl App for TextProcessorApp {
                         }
                     });
                     
-                    ui.label("All feedback is welcomed. Please send it to:");
+                    ui.label("No Feedback Is Welcomed:");
                 });
             });
         });
@@ -147,13 +148,19 @@ impl App for TextProcessorApp {
 impl TextProcessorApp {
     fn draw_controls(&mut self, ui: &mut egui::Ui) {
         ui.vertical(|ui| {
-            if ui.radio_value(&mut self.processing_mode, 0, "Morse Code").clicked() {
+            if ui.radio_value(&mut self.processing_mode, 0, "Morse <-> Latin").clicked() {
                 self.process_text();
             }
-            if ui.radio_value(&mut self.processing_mode, 1, "Runes").clicked() {
+            if ui.radio_value(&mut self.processing_mode, 1, "Runes <-> Latin").clicked() {
                 self.process_text();
             }
-            if ui.radio_value(&mut self.processing_mode, 2, "Phone Code").clicked() {
+            if ui.radio_value(&mut self.processing_mode, 2, "Phone <-> Latin").clicked() {
+                self.process_text();
+            }
+            if ui.radio_value(&mut self.processing_mode, 3, "Chaos <-> Latin").clicked() {
+                self.process_text();
+            }
+            if ui.radio_value(&mut self.processing_mode, 4, "Chaos <-> Runes").clicked() {
                 self.process_text();
             }
         });
@@ -164,14 +171,19 @@ impl TextProcessorApp {
             // Morse Code
             (0, 0) => self.output_text = morse_code::to_morse(&self.input_text),    // Encode
             (0, 1) => self.output_text = morse_code::from_morse(&self.input_text),  // Decode
-            
             // Runes
             (1, 0) => self.output_text = runes_code::to_runes(&self.input_text),    // Encode
             (1, 1) => self.output_text = runes_code::from_runes(&self.input_text),   // Decode     
             // Phone Code
             (2, 0) => self.output_text = phone_numbers_code::to_phone_number(&self.input_text), // Encode
             (2, 1) => self.output_text = phone_numbers_code::from_phone_number(&self.input_text), // Decode
-            
+            // Chaos Latin
+            (3, 0) => self.output_text = chaos_latin::to_cipher(&self.input_text), // Encode
+            (3, 1) => self.output_text = chaos_latin::from_cipher(&self.input_text), // Decode
+            // Chaos Runes
+            (4, 0) => self.output_text = runes_code::to_runes(&chaos_latin::from_cipher(&self.input_text)), // Encode
+            (4, 1) => self.output_text = chaos_latin::to_cipher(&runes_code::from_runes(&self.input_text)), // Decode
+
             // Default case
             _ => self.output_text = self.input_text.clone(),
         }
@@ -186,12 +198,12 @@ fn main() -> Result<(), eframe::Error> {
             .with_inner_size([800.0, 600.0])
             .with_min_inner_size([400.0, 300.0])
             .with_icon(icon.clone())
-            .with_title("GurkeCrypt v0.1"),
+            .with_title("GurkeCrypt v6.6.6"),
         ..Default::default()
     };
 
     eframe::run_native(
-        "GurkeCrypt v0.1", 
+        "GurkeCrypt v6.6.6",
         options,
         Box::new(|cc| Box::new(TextProcessorApp::new(cc)))
     )
