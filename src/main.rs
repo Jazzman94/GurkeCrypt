@@ -8,6 +8,7 @@ mod morse_code;
 mod phone_numbers_code;
 mod runes_code;
 mod chaos_latin;
+mod caesar;
 
 const ICON_PNG: &[u8] = include_bytes!("../assets/pickle_icon_128.png");
 
@@ -17,6 +18,7 @@ struct TextProcessorApp {
     processing_mode: i32,
     operation_mode: i32, // 0 for encode, 1 for decode
     char_count: usize,
+    caesar_shift: i32, // Caesar cipher shift value
 }
 
 impl Default for TextProcessorApp {
@@ -27,6 +29,7 @@ impl Default for TextProcessorApp {
             processing_mode: 0,
             operation_mode: 0,
             char_count: 0,
+            caesar_shift: 3, // Default Caesar shift
         }
     }
 }
@@ -62,6 +65,19 @@ impl App for TextProcessorApp {
                 }
                 if ui.radio_value(&mut self.operation_mode, 1, "Decode").clicked() {
                     self.process_text();
+                }
+                
+                // Caesar shift input (only show when Caesar mode is selected)
+                if self.processing_mode == 5 {
+                    ui.add_space(20.0);
+                    ui.label("Caesar shift:");
+                    let shift_changed = ui.add(egui::DragValue::new(&mut self.caesar_shift)
+                        .clamp_range(-25..=25)
+                        .prefix("shift: "));
+                    
+                    if shift_changed.changed() {
+                        self.process_text();
+                    }
                 }
             });
         });
@@ -163,6 +179,9 @@ impl TextProcessorApp {
             if ui.radio_value(&mut self.processing_mode, 4, "Chaos <-> Runes").clicked() {
                 self.process_text();
             }
+            if ui.radio_value(&mut self.processing_mode, 5, "Caesar <-> Latin").clicked() {
+                self.process_text();
+            }
         });
     }
 
@@ -183,6 +202,9 @@ impl TextProcessorApp {
             // Chaos Runes
             (4, 0) => self.output_text = runes_code::to_runes(&chaos_latin::from_cipher(&self.input_text)), // Encode
             (4, 1) => self.output_text = chaos_latin::to_cipher(&runes_code::from_runes(&self.input_text)), // Decode
+            // Caesar Cipher
+            (5, 0) => self.output_text = caesar::caesar_encrypt(&self.input_text, self.caesar_shift), // Encode
+            (5, 1) => self.output_text = caesar::caesar_decrypt(&self.input_text, self.caesar_shift), // Decode
 
             // Default case
             _ => self.output_text = self.input_text.clone(),
